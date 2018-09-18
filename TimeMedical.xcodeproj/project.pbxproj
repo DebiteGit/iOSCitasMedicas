@@ -1,0 +1,611 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		11A5FC7B6B130ADD79F0D454 /* Pods_TimeMedicalTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B475692CBB7EF1AF7DC4A64D /* Pods_TimeMedicalTests.framework */; };
+		582933E4215187E700351370 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582933E3215187E700351370 /* AppDelegate.swift */; };
+		582933E6215187E700351370 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582933E5215187E700351370 /* ViewController.swift */; };
+		582933E9215187E700351370 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 582933E7215187E700351370 /* Main.storyboard */; };
+		582933EC215187E700351370 /* TimeMedical.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 582933EA215187E700351370 /* TimeMedical.xcdatamodeld */; };
+		582933EE215187E700351370 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 582933ED215187E700351370 /* Assets.xcassets */; };
+		582933F1215187E700351370 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 582933EF215187E700351370 /* LaunchScreen.storyboard */; };
+		582933FC215187E800351370 /* TimeMedicalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582933FB215187E800351370 /* TimeMedicalTests.swift */; };
+		5829340B21518BD700351370 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5829340A21518BD700351370 /* GoogleService-Info.plist */; };
+		BBB7FA655C31A7D0C14E3276 /* Pods_TimeMedical.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F9E14806324B3704473F32D /* Pods_TimeMedical.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		582933F8215187E800351370 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 582933D8215187E700351370 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 582933DF215187E700351370;
+			remoteInfo = TimeMedical;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		323760F8B4BF8466A9DC9608 /* Pods-TimeMedicalTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeMedicalTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TimeMedicalTests/Pods-TimeMedicalTests.debug.xcconfig"; sourceTree = "<group>"; };
+		42E3D420DDD3274F17E7B4FC /* Pods-TimeMedical.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeMedical.release.xcconfig"; path = "Pods/Target Support Files/Pods-TimeMedical/Pods-TimeMedical.release.xcconfig"; sourceTree = "<group>"; };
+		582933E0215187E700351370 /* TimeMedical.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeMedical.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		582933E3215187E700351370 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		582933E5215187E700351370 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		582933E8215187E700351370 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		582933EB215187E700351370 /* TimeMedical.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TimeMedical.xcdatamodel; sourceTree = "<group>"; };
+		582933ED215187E700351370 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		582933F0215187E700351370 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		582933F2215187E700351370 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		582933F7215187E800351370 /* TimeMedicalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeMedicalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		582933FB215187E800351370 /* TimeMedicalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeMedicalTests.swift; sourceTree = "<group>"; };
+		582933FD215187E800351370 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5829340A21518BD700351370 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5DA4E37D0F04302367B08C1E /* Pods-TimeMedical.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeMedical.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TimeMedical/Pods-TimeMedical.debug.xcconfig"; sourceTree = "<group>"; };
+		7F9E14806324B3704473F32D /* Pods_TimeMedical.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeMedical.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8902B6A6604A79243D2BDD0E /* Pods-TimeMedicalTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeMedicalTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TimeMedicalTests/Pods-TimeMedicalTests.release.xcconfig"; sourceTree = "<group>"; };
+		B475692CBB7EF1AF7DC4A64D /* Pods_TimeMedicalTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeMedicalTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		582933DD215187E700351370 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBB7FA655C31A7D0C14E3276 /* Pods_TimeMedical.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		582933F4215187E800351370 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11A5FC7B6B130ADD79F0D454 /* Pods_TimeMedicalTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		582933D7215187E700351370 = {
+			isa = PBXGroup;
+			children = (
+				582933E2215187E700351370 /* TimeMedical */,
+				582933FA215187E800351370 /* TimeMedicalTests */,
+				582933E1215187E700351370 /* Products */,
+				892D1C24631EA780570AD8FD /* Pods */,
+				F89AD55764028EF52BAE237C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		582933E1215187E700351370 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				582933E0215187E700351370 /* TimeMedical.app */,
+				582933F7215187E800351370 /* TimeMedicalTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		582933E2215187E700351370 /* TimeMedical */ = {
+			isa = PBXGroup;
+			children = (
+				582933E3215187E700351370 /* AppDelegate.swift */,
+				582933E5215187E700351370 /* ViewController.swift */,
+				582933E7215187E700351370 /* Main.storyboard */,
+				582933ED215187E700351370 /* Assets.xcassets */,
+				582933EF215187E700351370 /* LaunchScreen.storyboard */,
+				582933F2215187E700351370 /* Info.plist */,
+				582933EA215187E700351370 /* TimeMedical.xcdatamodeld */,
+				5829340A21518BD700351370 /* GoogleService-Info.plist */,
+			);
+			path = TimeMedical;
+			sourceTree = "<group>";
+		};
+		582933FA215187E800351370 /* TimeMedicalTests */ = {
+			isa = PBXGroup;
+			children = (
+				582933FB215187E800351370 /* TimeMedicalTests.swift */,
+				582933FD215187E800351370 /* Info.plist */,
+			);
+			path = TimeMedicalTests;
+			sourceTree = "<group>";
+		};
+		892D1C24631EA780570AD8FD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5DA4E37D0F04302367B08C1E /* Pods-TimeMedical.debug.xcconfig */,
+				42E3D420DDD3274F17E7B4FC /* Pods-TimeMedical.release.xcconfig */,
+				323760F8B4BF8466A9DC9608 /* Pods-TimeMedicalTests.debug.xcconfig */,
+				8902B6A6604A79243D2BDD0E /* Pods-TimeMedicalTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F89AD55764028EF52BAE237C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7F9E14806324B3704473F32D /* Pods_TimeMedical.framework */,
+				B475692CBB7EF1AF7DC4A64D /* Pods_TimeMedicalTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		582933DF215187E700351370 /* TimeMedical */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 58293400215187E800351370 /* Build configuration list for PBXNativeTarget "TimeMedical" */;
+			buildPhases = (
+				B7B5B3DD122D0F707F79DA4C /* [CP] Check Pods Manifest.lock */,
+				582933DC215187E700351370 /* Sources */,
+				582933DD215187E700351370 /* Frameworks */,
+				582933DE215187E700351370 /* Resources */,
+				25DE131440CA6C83E3008980 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TimeMedical;
+			productName = TimeMedical;
+			productReference = 582933E0215187E700351370 /* TimeMedical.app */;
+			productType = "com.apple.product-type.application";
+		};
+		582933F6215187E800351370 /* TimeMedicalTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 58293403215187E800351370 /* Build configuration list for PBXNativeTarget "TimeMedicalTests" */;
+			buildPhases = (
+				912F550D93DBABD3F84AC679 /* [CP] Check Pods Manifest.lock */,
+				582933F3215187E800351370 /* Sources */,
+				582933F4215187E800351370 /* Frameworks */,
+				582933F5215187E800351370 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				582933F9215187E800351370 /* PBXTargetDependency */,
+			);
+			name = TimeMedicalTests;
+			productName = TimeMedicalTests;
+			productReference = 582933F7215187E800351370 /* TimeMedicalTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		582933D8215187E700351370 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Carlos Espinoza";
+				TargetAttributes = {
+					582933DF215187E700351370 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					582933F6215187E800351370 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 582933DF215187E700351370;
+					};
+				};
+			};
+			buildConfigurationList = 582933DB215187E700351370 /* Build configuration list for PBXProject "TimeMedical" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 582933D7215187E700351370;
+			productRefGroup = 582933E1215187E700351370 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				582933DF215187E700351370 /* TimeMedical */,
+				582933F6215187E800351370 /* TimeMedicalTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		582933DE215187E700351370 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				582933F1215187E700351370 /* LaunchScreen.storyboard in Resources */,
+				5829340B21518BD700351370 /* GoogleService-Info.plist in Resources */,
+				582933EE215187E700351370 /* Assets.xcassets in Resources */,
+				582933E9215187E700351370 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		582933F5215187E800351370 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		25DE131440CA6C83E3008980 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TimeMedical/Pods-TimeMedical-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TimeMedical/Pods-TimeMedical-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		912F550D93DBABD3F84AC679 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TimeMedicalTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B7B5B3DD122D0F707F79DA4C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TimeMedical-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		582933DC215187E700351370 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				582933EC215187E700351370 /* TimeMedical.xcdatamodeld in Sources */,
+				582933E6215187E700351370 /* ViewController.swift in Sources */,
+				582933E4215187E700351370 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		582933F3215187E800351370 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				582933FC215187E800351370 /* TimeMedicalTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		582933F9215187E800351370 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 582933DF215187E700351370 /* TimeMedical */;
+			targetProxy = 582933F8215187E800351370 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		582933E7215187E700351370 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				582933E8215187E700351370 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		582933EF215187E700351370 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				582933F0215187E700351370 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		582933FE215187E800351370 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		582933FF215187E800351370 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		58293401215187E800351370 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DA4E37D0F04302367B08C1E /* Pods-TimeMedical.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FVGPSZV4X2;
+				INFOPLIST_FILE = TimeMedical/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mx.com.debite.TimeMedical;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		58293402215187E800351370 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42E3D420DDD3274F17E7B4FC /* Pods-TimeMedical.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FVGPSZV4X2;
+				INFOPLIST_FILE = TimeMedical/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mx.com.debite.TimeMedical;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		58293404215187E800351370 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 323760F8B4BF8466A9DC9608 /* Pods-TimeMedicalTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FVGPSZV4X2;
+				INFOPLIST_FILE = TimeMedicalTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mx.com.debite.TimeMedicalTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TimeMedical.app/TimeMedical";
+			};
+			name = Debug;
+		};
+		58293405215187E800351370 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8902B6A6604A79243D2BDD0E /* Pods-TimeMedicalTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FVGPSZV4X2;
+				INFOPLIST_FILE = TimeMedicalTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mx.com.debite.TimeMedicalTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TimeMedical.app/TimeMedical";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		582933DB215187E700351370 /* Build configuration list for PBXProject "TimeMedical" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				582933FE215187E800351370 /* Debug */,
+				582933FF215187E800351370 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		58293400215187E800351370 /* Build configuration list for PBXNativeTarget "TimeMedical" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58293401215187E800351370 /* Debug */,
+				58293402215187E800351370 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		58293403215187E800351370 /* Build configuration list for PBXNativeTarget "TimeMedicalTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58293404215187E800351370 /* Debug */,
+				58293405215187E800351370 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		582933EA215187E700351370 /* TimeMedical.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				582933EB215187E700351370 /* TimeMedical.xcdatamodel */,
+			);
+			currentVersion = 582933EB215187E700351370 /* TimeMedical.xcdatamodel */;
+			path = TimeMedical.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 582933D8215187E700351370 /* Project object */;
+}
