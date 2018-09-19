@@ -1,24 +1,156 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Initial View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="InitialViewController" customModule="TimeMedical" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="NH3-YU-dSY">
+                                <rect key="frame" x="197" y="358" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="NH3-YU-dSY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Lc3-D7-Fot"/>
+                            <constraint firstItem="NH3-YU-dSY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="N0L-QE-mZO"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <segue destination="rRV-n8-krC" kind="show" identifier="toMenuScreen" animates="NO" id="fKV-xb-t5P"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="114" y="21"/>
+        </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="CE1-uf-a2U">
+            <objects>
+                <viewController id="rRV-n8-krC" customClass="MenuViewController" customModule="TimeMedical" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3t4-Iw-bhT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By Debite" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gi3-Jn-uDu">
+                                <rect key="frame" x="20" y="356" width="374" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="corazon" translatesAutoresizingMaskIntoConstraints="NO" id="3XS-0v-Zsc">
+                                <rect key="frame" x="164" y="209" width="86" height="86"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="112" id="Ina-k3-3Ma"/>
+                                    <constraint firstAttribute="width" secondItem="3XS-0v-Zsc" secondAttribute="height" multiplier="1:1" id="mz7-ML-ZZX"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Medical" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ER8-mZ-WS0">
+                                <rect key="frame" x="20" y="319" width="374" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZjA-cZ-squ">
+                                <rect key="frame" x="20" y="642" width="374" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Register">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="09W-pg-l0f" kind="show" id="yfb-um-bSQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3lO-zq-Hek">
+                                <rect key="frame" x="20" y="686" width="374" height="30"/>
+                                <state key="normal" title="Forgot Password?">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DUp-ro-qDH">
+                                <rect key="frame" x="20" y="598" width="374" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="33e-J4-UgC" kind="show" id="oBs-Wq-7gn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="DUp-ro-qDH" firstAttribute="centerX" secondItem="3t4-Iw-bhT" secondAttribute="centerX" id="1ta-rZ-pbo"/>
+                            <constraint firstItem="OVz-zz-WJj" firstAttribute="trailing" secondItem="Gi3-Jn-uDu" secondAttribute="trailing" constant="20" id="1tl-I5-3od"/>
+                            <constraint firstItem="Gi3-Jn-uDu" firstAttribute="leading" secondItem="OVz-zz-WJj" secondAttribute="leading" constant="20" id="4R5-TD-WVn"/>
+                            <constraint firstItem="OVz-zz-WJj" firstAttribute="trailing" secondItem="3lO-zq-Hek" secondAttribute="trailing" constant="20" id="7Xe-tH-cAh"/>
+                            <constraint firstItem="3lO-zq-Hek" firstAttribute="centerX" secondItem="3t4-Iw-bhT" secondAttribute="centerX" id="7g3-go-HeC"/>
+                            <constraint firstItem="DUp-ro-qDH" firstAttribute="leading" secondItem="OVz-zz-WJj" secondAttribute="leading" constant="20" id="9eE-l9-izd"/>
+                            <constraint firstItem="3XS-0v-Zsc" firstAttribute="centerX" secondItem="3t4-Iw-bhT" secondAttribute="centerX" id="Ijc-KA-mJT"/>
+                            <constraint firstItem="Gi3-Jn-uDu" firstAttribute="centerX" secondItem="3t4-Iw-bhT" secondAttribute="centerX" id="Tp8-oU-gbR"/>
+                            <constraint firstItem="3lO-zq-Hek" firstAttribute="top" secondItem="ZjA-cZ-squ" secondAttribute="bottom" constant="8" id="Uz1-Y9-sI1"/>
+                            <constraint firstItem="OVz-zz-WJj" firstAttribute="trailing" secondItem="DUp-ro-qDH" secondAttribute="trailing" constant="20" id="V9F-ce-dG6"/>
+                            <constraint firstItem="Gi3-Jn-uDu" firstAttribute="centerY" secondItem="3t4-Iw-bhT" secondAttribute="centerY" id="ZpQ-kl-sde"/>
+                            <constraint firstItem="Gi3-Jn-uDu" firstAttribute="top" secondItem="ER8-mZ-WS0" secondAttribute="bottom" constant="8" id="b3o-ec-KH2"/>
+                            <constraint firstItem="ZjA-cZ-squ" firstAttribute="leading" secondItem="OVz-zz-WJj" secondAttribute="leading" constant="20" id="dM1-p3-kdD"/>
+                            <constraint firstItem="OVz-zz-WJj" firstAttribute="trailing" secondItem="ER8-mZ-WS0" secondAttribute="trailing" constant="20" id="fCO-1I-7gE"/>
+                            <constraint firstItem="ER8-mZ-WS0" firstAttribute="leading" secondItem="OVz-zz-WJj" secondAttribute="leading" constant="20" id="kD6-jh-LYp"/>
+                            <constraint firstItem="ZjA-cZ-squ" firstAttribute="centerX" secondItem="3t4-Iw-bhT" secondAttribute="centerX" id="ked-1c-uqf"/>
+                            <constraint firstItem="OVz-zz-WJj" firstAttribute="bottom" secondItem="3lO-zq-Hek" secondAttribute="bottom" constant="20" id="mwh-Lf-Co3"/>
+                            <constraint firstItem="ER8-mZ-WS0" firstAttribute="centerX" secondItem="3t4-Iw-bhT" secondAttribute="centerX" id="o4W-Cf-F7T"/>
+                            <constraint firstItem="3lO-zq-Hek" firstAttribute="leading" secondItem="OVz-zz-WJj" secondAttribute="leading" constant="20" id="oO5-Zd-0e2"/>
+                            <constraint firstItem="ZjA-cZ-squ" firstAttribute="top" secondItem="DUp-ro-qDH" secondAttribute="bottom" constant="8" id="r06-EO-OEN"/>
+                            <constraint firstItem="OVz-zz-WJj" firstAttribute="trailing" secondItem="ZjA-cZ-squ" secondAttribute="trailing" constant="20" id="sV9-eO-MtM"/>
+                            <constraint firstItem="ER8-mZ-WS0" firstAttribute="top" secondItem="3XS-0v-Zsc" secondAttribute="bottom" constant="24" id="x7Y-dm-cfb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OVz-zz-WJj"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ppw-54-UA0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="863.768115942029" y="20.380434782608699"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="P4W-ee-Tvt">
+            <objects>
+                <viewController id="33e-J4-UgC" customClass="LoginViewController" customModule="TimeMedical" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MMU-OZ-AvM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Fdg-69-9lb"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hhx-JU-fU8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1745" y="-492"/>
+        </scene>
+        <!--Register View Controller-->
+        <scene sceneID="iNL-yc-An5">
+            <objects>
+                <viewController id="09W-pg-l0f" customClass="RegisterViewController" customModule="TimeMedical" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XAj-XA-FTX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ySg-ck-hdP"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GB0-FK-dGJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1745" y="547"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="corazon" width="86" height="86"/>
+    </resources>
 </document>
