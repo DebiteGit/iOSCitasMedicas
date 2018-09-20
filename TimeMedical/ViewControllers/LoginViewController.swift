@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Firebase
+import FirebaseAuth
 import GoogleSignIn
 
 class LoginViewController: UIViewController, UITextFieldDelegate, GIDSignInDelegate, GIDSignInUIDelegate {
@@ -15,6 +15,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate, GIDSignInDeleg
 	@IBOutlet weak var emailTextField: UITextField!
 	@IBOutlet weak var passwordTextField: UITextField!
 	@IBOutlet weak var loginButton: UIButton!
+	
+	@IBOutlet weak var GoogleButton: GIDSignInButton!
 	
 	var gradientLayer = CAGradientLayer()
 	var activityView:UIActivityIndicatorView!
@@ -47,6 +49,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, GIDSignInDeleg
 		
 		emailTextField.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
 		passwordTextField.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
+		
     }
 	
 	override func viewWillAppear(_ animated: Bool) {
@@ -164,8 +167,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate, GIDSignInDeleg
 	}
 	
 	func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
+		self.activityView.startAnimating()
+		self.GoogleButton.isEnabled = false
 		if let err = error {
 			print("Failed to log into Google", err)
+			self.GoogleButton.isEnabled = true
+			self.activityView.stopAnimating()
 			return
 		}
 		
@@ -180,8 +187,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate, GIDSignInDeleg
 				print("Failed to create a Firebase user with Google account: ", err)
 				return
 			}
+			self.activityView.stopAnimating()
 			self.dismiss(animated: true, completion: nil)
-			
+			self.GoogleButton.isEnabled = true
 		})
 	}
 	
