@@ -16,6 +16,9 @@
 		582933F1215187E700351370 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 582933EF215187E700351370 /* LaunchScreen.storyboard */; };
 		582933FC215187E800351370 /* TimeMedicalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582933FB215187E800351370 /* TimeMedicalTests.swift */; };
 		5829340B21518BD700351370 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5829340A21518BD700351370 /* GoogleService-Info.plist */; };
+		58A5F59621540C0D00999913 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A5F59521540C0D00999913 /* RoundedButton.swift */; };
+		58A5F59821540CC700999913 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A5F59721540CC700999913 /* RoundedTextField.swift */; };
+		58A5F59A2154272900999913 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A5F5992154272900999913 /* HomeViewController.swift */; };
 		58E9FB4B2151CD7300E20846 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E9FB4A2151CD7300E20846 /* InitialViewController.swift */; };
 		58E9FB4E2151CEF200E20846 /* HelperExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E9FB4D2151CEF200E20846 /* HelperExtension.swift */; };
 		58E9FB502151CF8B00E20846 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E9FB4F2151CF8B00E20846 /* MenuViewController.swift */; };
@@ -48,6 +51,9 @@
 		582933FB215187E800351370 /* TimeMedicalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeMedicalTests.swift; sourceTree = "<group>"; };
 		582933FD215187E800351370 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5829340A21518BD700351370 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		58A5F59521540C0D00999913 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		58A5F59721540CC700999913 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
+		58A5F5992154272900999913 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		58E9FB4A2151CD7300E20846 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		58E9FB4D2151CEF200E20846 /* HelperExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperExtension.swift; sourceTree = "<group>"; };
 		58E9FB4F2151CF8B00E20846 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +111,7 @@
 				582933E7215187E700351370 /* Main.storyboard */,
 				58E9FB492151CA9200E20846 /* ViewControllers */,
 				58E9FB4C2151CEB900E20846 /* Extensions */,
+				58A5F59421540BDD00999913 /* User Interface */,
 				582933ED215187E700351370 /* Assets.xcassets */,
 				582933EF215187E700351370 /* LaunchScreen.storyboard */,
 				582933F2215187E700351370 /* Info.plist */,
@@ -123,6 +130,15 @@
 			path = TimeMedicalTests;
 			sourceTree = "<group>";
 		};
+		58A5F59421540BDD00999913 /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				58A5F59521540C0D00999913 /* RoundedButton.swift */,
+				58A5F59721540CC700999913 /* RoundedTextField.swift */,
+			);
+			path = "User Interface";
+			sourceTree = "<group>";
+		};
 		58E9FB492151CA9200E20846 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +146,7 @@
 				58E9FB4A2151CD7300E20846 /* InitialViewController.swift */,
 				58E9FB4F2151CF8B00E20846 /* MenuViewController.swift */,
 				58E9FB552153677D00E20846 /* LoginViewController.swift */,
+				58A5F5992154272900999913 /* HomeViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -210,6 +227,9 @@
 		582933D8215187E700351370 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					MainTabBarController,
+				);
 				LastSwiftUpdateCheck = 1000;
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "Carlos Espinoza";
@@ -374,9 +394,12 @@
 				58E9FB562153677D00E20846 /* LoginViewController.swift in Sources */,
 				582933EC215187E700351370 /* TimeMedical.xcdatamodeld in Sources */,
 				58E9FB502151CF8B00E20846 /* MenuViewController.swift in Sources */,
+				58A5F59621540C0D00999913 /* RoundedButton.swift in Sources */,
 				582933E6215187E700351370 /* ViewController.swift in Sources */,
+				58A5F59A2154272900999913 /* HomeViewController.swift in Sources */,
 				582933E4215187E700351370 /* AppDelegate.swift in Sources */,
 				58E9FB4E2151CEF200E20846 /* HelperExtension.swift in Sources */,
+				58A5F59821540CC700999913 /* RoundedTextField.swift in Sources */,
 				58E9FB4B2151CD7300E20846 /* InitialViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

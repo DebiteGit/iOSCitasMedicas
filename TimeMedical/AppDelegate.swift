@@ -15,7 +15,7 @@ let primaryColor = UIColor(red: 210/255, green: 109/255, blue: 180/255, alpha: 1
 let secondaryColor = UIColor(red: 52/255, green: 148/255, blue: 230/255, alpha: 1)
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate {
 	
     var window: UIWindow?
 
@@ -25,31 +25,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         FirebaseApp.configure()
 		
 		GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
-		GIDSignIn.sharedInstance().delegate = self
 		
-        return true
-    }
-	
-	func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
-		if let err = error {
-			print("Failed to log into Google", err)
-			return
+		let authListener = Auth.auth().addStateDidChangeListener { auth, user in
+			
+			let storyboard = UIStoryboard(name: "Main", bundle: nil)
+			
+			if user != nil {
+				//
+				print("Existe usuario")
+				let controller = storyboard.instantiateViewController(withIdentifier: "MainTabBarController") as! UITabBarController
+				self.window?.rootViewController = controller
+				self.window?.makeKeyAndVisible()
+			} else {
+				// menu screen
+				print("NO Existe usuario")
+				let controller = storyboard.instantiateViewController(withIdentifier: "MenuViewController") as! MenuViewController
+				self.window?.rootViewController = controller
+				self.window?.makeKeyAndVisible()
+			}
 		}
 		
-		print("Successfully logged into Google", user)
-		
-		guard let idToken = user.authentication.idToken else {return}
-		guard let accessToken = user.authentication.accessToken else {return}
-		
-		let credentials = GoogleAuthProvider.credential(withIDToken: idToken,
-														accessToken: accessToken)
-		Auth.auth().signInAndRetrieveData(with: credentials, completion: {(user, error) in
-			if let err = error {
-				print("Failed to create a Firebase user with Google account: ", err)
-				return
-			}
-		})
-	}
+		return true
+    }
+	
+	
 	
 	@available(iOS 9.0, *)
 	func application(_ application: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any])
