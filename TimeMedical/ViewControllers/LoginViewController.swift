@@ -8,28 +8,22 @@
 
 import UIKit
 import FirebaseAuth
-import GoogleSignIn
 
-class LoginViewController: UIViewController, UITextFieldDelegate, GIDSignInDelegate, GIDSignInUIDelegate {
+class LoginViewController: UIViewController, UITextFieldDelegate {
 
 	@IBOutlet weak var emailTextField: UITextField!
 	@IBOutlet weak var passwordTextField: UITextField!
 	@IBOutlet weak var loginButton: UIButton!
 	
-	@IBOutlet weak var GoogleButton: GIDSignInButton!
-	
 	var gradientLayer = CAGradientLayer()
 	var activityView:UIActivityIndicatorView!
 	
-    override func viewDidLoad() {
+	override func viewDidLoad() {
         super.viewDidLoad()
 		
 		self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
 		self.navigationController?.navigationBar.shadowImage = UIImage()
 		self.navigationController?.navigationBar.isTranslucent = true
-		
-		GIDSignIn.sharedInstance().uiDelegate = self
-		GIDSignIn.sharedInstance().delegate = self
 
 		gradientLayer = view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
 		view.layer.insertSublayer(gradientLayer, at: 0)
@@ -39,7 +33,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, GIDSignInDeleg
 		passwordTextField.delegate = self
 		
 		activityView = UIActivityIndicatorView(style: .gray)
-		activityView.color = secondaryColor
+		activityView.color = UIColor.white
 		activityView.frame = CGRect(x: 0, y: 0, width: 60.0, height: 60.0)
 		activityView.center = loginButton.center
 		
@@ -100,16 +94,24 @@ class LoginViewController: UIViewController, UITextFieldDelegate, GIDSignInDeleg
 		guard let email = self.emailTextField.text else { return }
 		guard let pass = self.passwordTextField.text else { return }
 		
+		emailTextField.resignFirstResponder()
+		passwordTextField.resignFirstResponder()
+		emailTextField.endEditing(true)
+		passwordTextField.endEditing(true)
+		NotificationCenter.default.removeObserver(self)
+		
+		self.loginButton.isEnabled = false
+		
 		self.loginButton.setTitle("", for: .normal)
 		self.activityView.startAnimating()
 		
-		print("Aqui se envia usuario y contraseña")
 		Auth.auth().signIn(withEmail: email, password: pass) { user, error in
 			if error == nil && user != nil {
 				Auth.auth().currentUser?.reload(completion: {(err) in
 					if Auth.auth().currentUser?.isEmailVerified == true{
 						self.dismiss(animated: true, completion: nil)
 					}else{
+						self.loginButton.isEnabled = true
 						self.alert(title: "Verifica tu correo", message: "Para acceder es necesario verificar tu cuenta mediante el correo")
 					}
 				})
@@ -118,7 +120,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, GIDSignInDeleg
 				self.alert(title: "Error de Credenciales", message: (error?.localizedDescription)!)
 				print("Error logging in: \(error!)")
 			}
-			
+			self.loginButton.isEnabled = true
 			self.passwordTextField.text=""
 			self.activityView.stopAnimating()
 			self.setLogInButton(enabled: false)
@@ -131,7 +133,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate, GIDSignInDeleg
 	
 	override func viewDidLayoutSubviews() {
 		super.viewDidLayoutSubviews()
-		
 		gradientLayer.frame = view.bounds
 	}
 	
@@ -164,33 +165,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate, GIDSignInDeleg
 		let password = passwordTextField.text
 		let formFilled = email != nil && email != "" && password != nil && password != ""
 		setLogInButton(enabled: formFilled)
-	}
-	
-	func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
-		self.activityView.startAnimating()
-		self.GoogleButton.isEnabled = false
-		if let err = error {
-			print("Failed to log into Google", err)
-			self.GoogleButton.isEnabled = true
-			self.activityView.stopAnimating()
-			return
-		}
-		
-		print("Successfully logged into Google", user)
-		
-		guard let idToken = user.authentication.idToken else {return}
-		guard let accessToken = user.authentication.accessToken else {return}
-		
-		let credentials = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: accessToken)
-		Auth.auth().signInAndRetrieveData(with: credentials, completion: {(user, error) in
-			if let err = error {
-				print("Failed to create a Firebase user with Google account: ", err)
-				return
-			}
-			self.activityView.stopAnimating()
-			self.dismiss(animated: true, completion: nil)
-			self.GoogleButton.isEnabled = true
-		})
 	}
 	
 }

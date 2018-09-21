@@ -31,11 +31,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 			let storyboard = UIStoryboard(name: "Main", bundle: nil)
 			
 			if user != nil {
+				
+				if Auth.auth().currentUser?.isEmailVerified == true{
+					print("Existe usuario")
+					let controller = storyboard.instantiateViewController(withIdentifier: "MainTabBarController") as! UITabBarController
+					self.window?.rootViewController = controller
+					self.window?.makeKeyAndVisible()
+				}else{
+					print("Usuario no verificado")
+					let controller = storyboard.instantiateViewController(withIdentifier: "MenuViewController") as! MenuViewController
+					self.window?.rootViewController = controller
+					self.window?.makeKeyAndVisible()
+				}
 				//
-				print("Existe usuario")
-				let controller = storyboard.instantiateViewController(withIdentifier: "MainTabBarController") as! UITabBarController
-				self.window?.rootViewController = controller
-				self.window?.makeKeyAndVisible()
+				
 			} else {
 				// menu screen
 				print("NO Existe usuario")
