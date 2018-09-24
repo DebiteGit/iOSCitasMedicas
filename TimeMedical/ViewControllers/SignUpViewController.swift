@@ -92,12 +92,13 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
 				}
 				
 			} else {
+				self.alert(title: "Error", message: (error?.localizedDescription)!)
 				self.setSignUpButton(enabled: true)
 				self.signupButton.setTitle("Sign Up", for: .normal)
 				self.activityView.stopAnimating()
 			}
 		}
-		
+
 	}
 	
 	@IBAction func back(_ sender: UIBarButtonItem) {

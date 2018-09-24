@@ -15,6 +15,8 @@ target 'TimeMedical' do
   pod 'Firebase/Storage'
 
   pod 'GoogleSignIn'
+  
+  pod 'KeychainSwift'
 
   target 'TimeMedicalTests' do
     inherit! :search_paths

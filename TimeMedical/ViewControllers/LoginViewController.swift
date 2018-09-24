@@ -105,6 +105,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 		self.loginButton.setTitle("", for: .normal)
 		self.activityView.startAnimating()
 		
+		try! Auth.auth().signOut()
+		
 		Auth.auth().signIn(withEmail: email, password: pass) { user, error in
 			if error == nil && user != nil {
 				Auth.auth().currentUser?.reload(completion: {(err) in

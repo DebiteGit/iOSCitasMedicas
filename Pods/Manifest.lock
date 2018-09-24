@@ -116,6 +116,7 @@ PODS:
   - GTMSessionFetcher/Core (1.2.0)
   - GTMSessionFetcher/Full (1.2.0):
     - GTMSessionFetcher/Core (= 1.2.0)
+  - KeychainSwift (11.0.0)
   - leveldb-library (1.20)
   - nanopb (0.3.8):
     - nanopb/decode (= 0.3.8)
@@ -133,6 +134,7 @@ DEPENDENCIES:
   - Firebase/RemoteConfig
   - Firebase/Storage
   - GoogleSignIn
+  - KeychainSwift
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -154,6 +156,7 @@ SPEC REPOS:
     - GoogleUtilities
     - GTMOAuth2
     - GTMSessionFetcher
+    - KeychainSwift
     - leveldb-library
     - nanopb
     - Protobuf
@@ -177,10 +180,11 @@ SPEC CHECKSUMS:
   GoogleUtilities: 6f681e27050c5e130325e89fa0316dfca826f954
   GTMOAuth2: c77fe325e4acd453837e72d91e3b5f13116857b2
   GTMSessionFetcher: 0c4baf0a73acd0041bf9f71ea018deedab5ea84e
+  KeychainSwift: bea6bd9f98af7b8d7ca4aa79fe105c00fab532db
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   Protobuf: 1eb9700044745f00181c136ef21b8ff3ad5a0fd5
 
-PODFILE CHECKSUM: beb052eeef04a48847f73ac2ecbbe6518318f827
+PODFILE CHECKSUM: 3bbda78c1e8fe54ebfc812d2a5e96c454975bfc8
 
 COCOAPODS: 1.5.3

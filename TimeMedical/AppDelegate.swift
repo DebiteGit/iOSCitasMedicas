@@ -19,7 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
@@ -47,7 +46,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 				
 			} else {
 				// menu screen
-				print("NO Existe usuario")
 				let controller = storyboard.instantiateViewController(withIdentifier: "MenuViewController") as! MenuViewController
 				self.window?.rootViewController = controller
 				self.window?.makeKeyAndVisible()

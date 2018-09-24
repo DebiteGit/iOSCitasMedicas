@@ -24,6 +24,7 @@ class MenuViewController: UIViewController {
 		gradientLayer.frame = view.bounds
 		
 		LoginView.layer.cornerRadius = 10
+		
     }
 	
 	func animateIn() {
