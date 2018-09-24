@@ -17,6 +17,8 @@ target 'TimeMedical' do
   pod 'GoogleSignIn'
   
   pod 'KeychainSwift'
+  
+  pod 'JTAppleCalendar'
 
   target 'TimeMedicalTests' do
     inherit! :search_paths
