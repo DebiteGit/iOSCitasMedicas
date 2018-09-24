@@ -16,6 +16,15 @@
 		582933F1215187E700351370 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 582933EF215187E700351370 /* LaunchScreen.storyboard */; };
 		582933FC215187E800351370 /* TimeMedicalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582933FB215187E800351370 /* TimeMedicalTests.swift */; };
 		5829340B21518BD700351370 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5829340A21518BD700351370 /* GoogleService-Info.plist */; };
+		58A5F59621540C0D00999913 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A5F59521540C0D00999913 /* RoundedButton.swift */; };
+		58A5F59821540CC700999913 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A5F59721540CC700999913 /* RoundedTextField.swift */; };
+		58A5F59A2154272900999913 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A5F5992154272900999913 /* HomeViewController.swift */; };
+		58A5F59E21543A5300999913 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A5F59D21543A5300999913 /* SignUpViewController.swift */; };
+		58A5F5A02154A25C00999913 /* Login2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A5F59F2154A25C00999913 /* Login2ViewController.swift */; };
+		58E9FB4B2151CD7300E20846 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E9FB4A2151CD7300E20846 /* InitialViewController.swift */; };
+		58E9FB4E2151CEF200E20846 /* HelperExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E9FB4D2151CEF200E20846 /* HelperExtension.swift */; };
+		58E9FB502151CF8B00E20846 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E9FB4F2151CF8B00E20846 /* MenuViewController.swift */; };
+		58E9FB562153677D00E20846 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E9FB552153677D00E20846 /* LoginViewController.swift */; };
 		BBB7FA655C31A7D0C14E3276 /* Pods_TimeMedical.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F9E14806324B3704473F32D /* Pods_TimeMedical.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +53,15 @@
 		582933FB215187E800351370 /* TimeMedicalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeMedicalTests.swift; sourceTree = "<group>"; };
 		582933FD215187E800351370 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5829340A21518BD700351370 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		58A5F59521540C0D00999913 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		58A5F59721540CC700999913 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
+		58A5F5992154272900999913 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		58A5F59D21543A5300999913 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		58A5F59F2154A25C00999913 /* Login2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login2ViewController.swift; sourceTree = "<group>"; };
+		58E9FB4A2151CD7300E20846 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		58E9FB4D2151CEF200E20846 /* HelperExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperExtension.swift; sourceTree = "<group>"; };
+		58E9FB4F2151CF8B00E20846 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		58E9FB552153677D00E20846 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5DA4E37D0F04302367B08C1E /* Pods-TimeMedical.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeMedical.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TimeMedical/Pods-TimeMedical.debug.xcconfig"; sourceTree = "<group>"; };
 		7F9E14806324B3704473F32D /* Pods_TimeMedical.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeMedical.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8902B6A6604A79243D2BDD0E /* Pods-TimeMedicalTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeMedicalTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TimeMedicalTests/Pods-TimeMedicalTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -94,13 +112,16 @@
 			isa = PBXGroup;
 			children = (
 				582933E3215187E700351370 /* AppDelegate.swift */,
-				582933E5215187E700351370 /* ViewController.swift */,
 				582933E7215187E700351370 /* Main.storyboard */,
+				58E9FB492151CA9200E20846 /* ViewControllers */,
+				58E9FB4C2151CEB900E20846 /* Extensions */,
+				58A5F59421540BDD00999913 /* User Interface */,
 				582933ED215187E700351370 /* Assets.xcassets */,
 				582933EF215187E700351370 /* LaunchScreen.storyboard */,
 				582933F2215187E700351370 /* Info.plist */,
 				582933EA215187E700351370 /* TimeMedical.xcdatamodeld */,
 				5829340A21518BD700351370 /* GoogleService-Info.plist */,
+				58A5F59F2154A25C00999913 /* Login2ViewController.swift */,
 			);
 			path = TimeMedical;
 			sourceTree = "<group>";
@@ -112,6 +133,36 @@
 				582933FD215187E800351370 /* Info.plist */,
 			);
 			path = TimeMedicalTests;
+			sourceTree = "<group>";
+		};
+		58A5F59421540BDD00999913 /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				58A5F59521540C0D00999913 /* RoundedButton.swift */,
+				58A5F59721540CC700999913 /* RoundedTextField.swift */,
+			);
+			path = "User Interface";
+			sourceTree = "<group>";
+		};
+		58E9FB492151CA9200E20846 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				582933E5215187E700351370 /* ViewController.swift */,
+				58E9FB4A2151CD7300E20846 /* InitialViewController.swift */,
+				58E9FB4F2151CF8B00E20846 /* MenuViewController.swift */,
+				58E9FB552153677D00E20846 /* LoginViewController.swift */,
+				58A5F5992154272900999913 /* HomeViewController.swift */,
+				58A5F59D21543A5300999913 /* SignUpViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		58E9FB4C2151CEB900E20846 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				58E9FB4D2151CEF200E20846 /* HelperExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		892D1C24631EA780570AD8FD /* Pods */ = {
@@ -146,6 +197,7 @@
 				582933DD215187E700351370 /* Frameworks */,
 				582933DE215187E700351370 /* Resources */,
 				25DE131440CA6C83E3008980 /* [CP] Embed Pods Frameworks */,
+				16E23F08A414DB3FE321CEE3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -181,6 +233,9 @@
 		582933D8215187E700351370 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					MainTabBarController,
+				);
 				LastSwiftUpdateCheck = 1000;
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "Carlos Espinoza";
@@ -235,6 +290,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		16E23F08A414DB3FE321CEE3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TimeMedical/Pods-TimeMedical-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TimeMedical/Pods-TimeMedical-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		25DE131440CA6C83E3008980 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -244,9 +321,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-TimeMedical/Pods-TimeMedical-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -255,9 +334,11 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -318,9 +399,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58E9FB562153677D00E20846 /* LoginViewController.swift in Sources */,
 				582933EC215187E700351370 /* TimeMedical.xcdatamodeld in Sources */,
+				58A5F59E21543A5300999913 /* SignUpViewController.swift in Sources */,
+				58E9FB502151CF8B00E20846 /* MenuViewController.swift in Sources */,
+				58A5F59621540C0D00999913 /* RoundedButton.swift in Sources */,
 				582933E6215187E700351370 /* ViewController.swift in Sources */,
+				58A5F59A2154272900999913 /* HomeViewController.swift in Sources */,
 				582933E4215187E700351370 /* AppDelegate.swift in Sources */,
+				58E9FB4E2151CEF200E20846 /* HelperExtension.swift in Sources */,
+				58A5F59821540CC700999913 /* RoundedTextField.swift in Sources */,
+				58E9FB4B2151CD7300E20846 /* InitialViewController.swift in Sources */,
+				58A5F5A02154A25C00999913 /* Login2ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,7 +576,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FVGPSZV4X2;
 				INFOPLIST_FILE = TimeMedical/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -506,7 +596,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FVGPSZV4X2;
 				INFOPLIST_FILE = TimeMedical/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
