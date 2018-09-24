@@ -115,45 +115,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OVz-zz-WJj"/>
                     </view>
-                    <connections>
-                        <outlet property="LoginView" destination="iUx-1l-AxH" id="wUL-q3-XeX"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ppw-54-UA0" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <view contentMode="scaleToFill" id="iUx-1l-AxH">
-                    <rect key="frame" x="0.0" y="0.0" width="368" height="483"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                    <subviews>
-                        <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ddg-Sq-r4i">
-                            <rect key="frame" x="0.0" y="-19" width="368" height="502"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="ivm-H1-Cz2">
-                                <rect key="frame" x="0.0" y="0.0" width="368" height="502"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cge-dm-BVB">
-                                        <rect key="frame" x="8" y="52" width="36" height="39"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                        <state key="normal" title="X"/>
-                                        <connections>
-                                            <action selector="cancelLogin:" destination="rRV-n8-krC" eventType="touchUpInside" id="AaC-PF-vo2"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V4R-HM-gZt">
-                                        <rect key="frame" x="163" y="241" width="42" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </view>
-                            <blurEffect style="light"/>
-                        </visualEffectView>
-                    </subviews>
-                    <viewLayoutGuide key="safeArea" id="6bK-Wr-V7j"/>
-                </view>
             </objects>
             <point key="canvasLocation" x="862.31884057971024" y="18.75"/>
         </scene>

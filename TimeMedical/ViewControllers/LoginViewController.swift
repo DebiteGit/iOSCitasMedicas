@@ -54,7 +54,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 	}
 	
 	override func viewWillDisappear(_ animated: Bool) {
-		
 		emailTextField.resignFirstResponder()
 		passwordTextField.resignFirstResponder()
 		emailTextField.endEditing(true)
@@ -69,9 +68,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 	*/
 	
 	@objc func keyboardWillAppear(notification: NSNotification){
-
-		activityView.center = CGPoint(x: view.center.x,
-									  y: view.center.y)
+		activityView.center = CGPoint(x: view.center.x, y: view.center.y)
 	}
 	
 	/**
@@ -80,11 +77,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 	
 	func setLogInButton(enabled:Bool){
 		if enabled{
-			loginButton.setTitle("Log In", for: .normal)
 			loginButton.alpha = 1.0
 			loginButton.isEnabled =  true
 		}else{
-			loginButton.setTitle("Log In", for: .normal)
 			loginButton.alpha = 0.5
 			loginButton.isEnabled = false
 		}
@@ -102,7 +97,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 		
 		self.loginButton.isEnabled = false
 		
-		self.loginButton.setTitle("", for: .normal)
 		self.activityView.startAnimating()
 		
 		try! Auth.auth().signOut()
@@ -141,7 +135,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
 		
 		// Resigns the target textField and assigns the next textField in the form.
-		
 		switch textField {
 		case emailTextField:
 			emailTextField.resignFirstResponder()

@@ -55,14 +55,10 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
 		guard let pass = self.passwordField.text else { return }
 		
 		setSignUpButton(enabled: false)
-		signupButton.setTitle("", for: .normal)
 		activityView.startAnimating()
-		
-		print("Aqui se registra sesión")
 		
 		Auth.auth().createUser(withEmail: email, password: pass) { user, error in
 			if error == nil && user != nil {
-				print("User created!")
 				Auth.auth().currentUser?.sendEmailVerification{ (error) in
 					if error != nil {
 						print(error)
@@ -123,7 +119,6 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
 	}
 	
 	@objc func keyboardWillAppear(notification: NSNotification){
-		
 		activityView.center = CGPoint(x: view.center.x, y: view.center.y)
 	}
 	
