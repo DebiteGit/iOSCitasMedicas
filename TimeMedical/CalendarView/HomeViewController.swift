@@ -17,6 +17,8 @@ class HomeViewController: UIViewController {
 	let selectedMonthColor = UIColor.white
 	let currentDateSelectedViewColor = UIColor.darkGray
 	
+	let todayBackground =  UIColor.lightGray
+	
 	let formatter: DateFormatter = {
 		let dataFormatter = DateFormatter()
 		dataFormatter.timeZone = Calendar.current.timeZone
@@ -24,6 +26,8 @@ class HomeViewController: UIViewController {
 		dataFormatter.dateFormat = "yyyy MM dd"
 		return dataFormatter
 	}()
+	
+	let todayDate = Date()
 
 	@IBOutlet weak var calendarView: JTAppleCalendarView!
 	@IBOutlet weak var yearMonth: UINavigationItem!
@@ -50,16 +54,29 @@ class HomeViewController: UIViewController {
 	func handleCellTextcolor(view: JTAppleCell?, cellState:CellState) {
 		guard let validCell = view as? CustomCell else {return}
 		
-		if cellState.isSelected {
+		formatter.dateFormat = "yyyy MM dd"
+
+		let todayDateString = formatter.string(from: todayDate)
+		let monthDateString = formatter.string(from: cellState.date)
+		
+		if todayDateString == monthDateString {
+			validCell.selectedView.backgroundColor = todayBackground
 			validCell.dateLabel.textColor = selectedMonthColor
+			validCell.selectedView.isHidden = false
 		}else{
-			validCell.dateLabel.textColor = (cellState.dateBelongsTo == .thisMonth ? monthColor : outsideMonthColor)
+			if cellState.isSelected {
+				validCell.dateLabel.textColor = selectedMonthColor
+			}else{
+				validCell.dateLabel.textColor = (cellState.dateBelongsTo == .thisMonth ? monthColor : outsideMonthColor)
+			}
 		}
 	}
 	
 	func handleCellSelected(view: JTAppleCell?, cellState:CellState) {
 		guard let validCell = view as? CustomCell else {return}
+		
 		validCell.selectedView.isHidden = (cellState.isSelected ? false : true)
+		
 	}
 	
 	func setupViwesOfCalendar(from visibleDates: DateSegmentInfo) {
