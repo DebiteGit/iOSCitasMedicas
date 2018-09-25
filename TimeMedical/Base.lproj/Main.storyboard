@@ -283,7 +283,7 @@
                                                             </constraints>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                                    <integer key="value" value="15"/>
+                                                                    <integer key="value" value="20"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
@@ -301,8 +301,14 @@
                                                     <constraint firstItem="H0y-KO-jsh" firstAttribute="centerY" secondItem="igd-1x-ZKp" secondAttribute="centerY" id="Z4F-Ry-Tzv"/>
                                                     <constraint firstItem="aK1-pn-lZX" firstAttribute="centerX" secondItem="igd-1x-ZKp" secondAttribute="centerX" id="kVd-Bt-D3g"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <outlet property="dateLabel" destination="aK1-pn-lZX" id="4gw-tX-e1E"/>
+                                                    <outlet property="selectedView" destination="H0y-KO-jsh" id="UVk-Td-UIk"/>
                                                 </connections>
                                             </collectionViewCell>
                                         </cells>
@@ -329,6 +335,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="calendarView" destination="eA3-kf-PBg" id="EEL-pf-2I5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Us-Ed-YgE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -483,6 +492,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="corazon" width="86" height="86"/>
+        <image name="corazon" width="204.92308044433594" height="204.92308044433594"/>
     </resources>
 </document>

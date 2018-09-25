@@ -6,46 +6,50 @@
 //  Copyright © 2018 Carlos Espinoza. All rights reserved.
 //
 
-import Foundation
 import UIKit
 import FirebaseAuth
 import JTAppleCalendar
 
-class HomeViewController: UIViewController, JTAppleCalendarViewDelegate, JTAppleCalendarViewDataSource {
+class HomeViewController: UIViewController {
+	
+	let outsideMonthColor = UIColor.lightGray
+	let monthColor = UIColor.black
+	let selectedMonthColor = UIColor.white
+	let currentDateSelectedViewColor = UIColor.darkGray
 	
 	let formatter = DateFormatter()
 
-    override func viewDidLoad() {
+	@IBOutlet weak var calendarView: JTAppleCalendarView!
+	
+	override func viewDidLoad() {
         super.viewDidLoad()
+		setupCalendarView()
     }
+	
+	func setupCalendarView() {
+		calendarView.minimumLineSpacing = 0
+		calendarView.minimumInteritemSpacing = 0
+	}
+	
+	func handleCellTextcolor(view: JTAppleCell?, cellState:CellState) {
+		guard let validCell = view as? CustomCell else {return}
+		
+		if cellState.isSelected {
+			validCell.dateLabel.textColor = selectedMonthColor
+		}else{
+			validCell.dateLabel.textColor = (cellState.dateBelongsTo == .thisMonth ? monthColor : outsideMonthColor)
+		}
+	}
+	
+	func handleCellSelected(view: JTAppleCell?, cellState:CellState) {
+		guard let validCell = view as? CustomCell else {return}
+		validCell.selectedView.isHidden = (cellState.isSelected ? false : true)
+	}
     
 	@IBAction func handleLogout(_ sender: UIBarButtonItem) {
 		try! Auth.auth().signOut()
 		self.dismiss(animated: true, completion: nil)
 	}
 	
-	func calendar(_ calendar: JTAppleCalendarView, willDisplay cell: JTAppleCell, forItemAt date: Date, cellState: CellState, indexPath: IndexPath) {
-		print("CalendarView")
-	}
-	
-	func calendar(_ calendar: JTAppleCalendarView, cellForItemAt date: Date, cellState: CellState, indexPath: IndexPath) -> JTAppleCell {
-		let cell = calendar.dequeueReusableJTAppleCell(withReuseIdentifier: "CustomCell", for: indexPath) as! CustomCell
-		cell.dateLabel.text = cellState.text
-		return cell
-	}
-	
-	func configureCalendar(_ calendar: JTAppleCalendarView) -> ConfigurationParameters {
-		print("Formatear Calendario")
-		
-		formatter.dateFormat = "yyyy MM dd"
-		formatter.timeZone = Calendar.current.timeZone
-		formatter.locale = Calendar.current.locale
-		
-		let startDate = formatter.date(from: "2018 09 01")!
-		let endDate = formatter.date(from: "2018 12 31")!
-		
-		let parameters = ConfigurationParameters(startDate: startDate, endDate: endDate)
-		return parameters
-	}
-	
 }
+
