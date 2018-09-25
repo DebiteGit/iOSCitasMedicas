@@ -20,6 +20,7 @@ class HomeViewController: UIViewController {
 	let formatter = DateFormatter()
 
 	@IBOutlet weak var calendarView: JTAppleCalendarView!
+	@IBOutlet weak var yearMonth: UINavigationItem!
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,8 +28,14 @@ class HomeViewController: UIViewController {
     }
 	
 	func setupCalendarView() {
+		// Setup calendar spacing
 		calendarView.minimumLineSpacing = 0
 		calendarView.minimumInteritemSpacing = 0
+		
+		// Setup labels
+		calendarView.visibleDates{ visibleDates in
+			self.setupViwesOfCalendar(from: visibleDates)
+		}
 	}
 	
 	func handleCellTextcolor(view: JTAppleCell?, cellState:CellState) {
@@ -44,6 +51,17 @@ class HomeViewController: UIViewController {
 	func handleCellSelected(view: JTAppleCell?, cellState:CellState) {
 		guard let validCell = view as? CustomCell else {return}
 		validCell.selectedView.isHidden = (cellState.isSelected ? false : true)
+	}
+	
+	func setupViwesOfCalendar(from visibleDates: DateSegmentInfo) {
+		let date = visibleDates.monthDates.first!.date
+		
+		formatter.dateFormat = "yyyy"
+		let year = formatter.string(from: date)
+		formatter.dateFormat = "MMMM"
+		let month = formatter.string(from: date)
+		
+		yearMonth.title = month.capitalized + " " + year
 	}
     
 	@IBAction func handleLogout(_ sender: UIBarButtonItem) {

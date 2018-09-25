@@ -47,4 +47,8 @@ extension HomeViewController: JTAppleCalendarViewDelegate {
 		handleCellSelected(view: cell, cellState: cellState)
 		handleCellTextcolor(view: cell, cellState: cellState)
 	}
+	
+	func calendar(_ calendar: JTAppleCalendarView, didScrollToDateSegmentWith visibleDates: DateSegmentInfo) {
+		setupViwesOfCalendar(from: visibleDates)
+	}
 }
