@@ -17,7 +17,13 @@ class HomeViewController: UIViewController {
 	let selectedMonthColor = UIColor.white
 	let currentDateSelectedViewColor = UIColor.darkGray
 	
-	let formatter = DateFormatter()
+	let formatter: DateFormatter = {
+		let dataFormatter = DateFormatter()
+		dataFormatter.timeZone = Calendar.current.timeZone
+		dataFormatter.locale = Calendar.current.locale
+		dataFormatter.dateFormat = "yyyy MM dd"
+		return dataFormatter
+	}()
 
 	@IBOutlet weak var calendarView: JTAppleCalendarView!
 	@IBOutlet weak var yearMonth: UINavigationItem!
@@ -28,6 +34,7 @@ class HomeViewController: UIViewController {
     }
 	
 	func setupCalendarView() {
+		calendarView.scrollToDate(Date(), animateScroll:false)
 		// Setup calendar spacing
 		calendarView.minimumLineSpacing = 0
 		calendarView.minimumInteritemSpacing = 0
@@ -36,6 +43,8 @@ class HomeViewController: UIViewController {
 		calendarView.visibleDates{ visibleDates in
 			self.setupViwesOfCalendar(from: visibleDates)
 		}
+		
+		calendarView.selectDates([Date()])
 	}
 	
 	func handleCellTextcolor(view: JTAppleCell?, cellState:CellState) {

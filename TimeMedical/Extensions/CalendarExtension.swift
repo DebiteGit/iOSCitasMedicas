@@ -15,8 +15,8 @@ extension HomeViewController: JTAppleCalendarViewDataSource{
 		formatter.timeZone = Calendar.current.timeZone
 		formatter.locale = Calendar.current.locale
 		
-		let startDate = formatter.date(from: "2018 09 01")!
-		let endDate = formatter.date(from: "2018 12 31")!
+		let startDate = formatter.date(from: "2018 01 01")! // TODO Usar Remote Config
+		let endDate = formatter.date(from: "2020 12 31")! // TODO Usar Remote Config
 		
 		let parameters = ConfigurationParameters(startDate: startDate, endDate: endDate)
 		return parameters
@@ -50,5 +50,14 @@ extension HomeViewController: JTAppleCalendarViewDelegate {
 	
 	func calendar(_ calendar: JTAppleCalendarView, didScrollToDateSegmentWith visibleDates: DateSegmentInfo) {
 		setupViwesOfCalendar(from: visibleDates)
+	}
+	
+	func calendar(_ calendar: JTAppleCalendarView, headerViewForDateRange range: (start: Date, end: Date), at indexPath: IndexPath) -> JTAppleCollectionReusableView {
+		let header = calendar.dequeueReusableJTAppleSupplementaryView(withReuseIdentifier: "header", for: indexPath) as! CalendarHeader
+		return header
+	}
+	
+	func calendarSizeForMonths(_ calendar: JTAppleCalendarView?) -> MonthSize? {
+		return MonthSize(defaultSize: 50.0)
 	}
 }
